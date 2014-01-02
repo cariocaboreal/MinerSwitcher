@@ -14,9 +14,9 @@ db.open(function(err, db) {
         console.log("Connected to 'userdb' database");
         db.createCollection('users',{w:1}, function(err, collection) {
             if (!err) {
-                console.log(collection);
-                console.log("The 'users' collection doesn't exist. Creating it with sample data...");
-                populateDB(collection);
+                //console.log(collection);
+                //console.log("The 'users' collection doesn't exist. Creating it with sample data...");
+                //populateDB(collection);
             }
         });
     } else {
