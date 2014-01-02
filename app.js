@@ -32,12 +32,12 @@ app.get('/logout', loginCheck, function (req, res) {
 	res.redirect('#login');
 });
 
-app.get('/miner', user.getConf);
+app.get('/switcher/:id', user.getConf);
 // user
-//app.get('/users', user.findAll);
-//app.get('/users/:id', user.findById);
-//app.put('/users/:id', loginCheck, user.updateUser);
-//app.delete('/users/:id', loginCheck, user.deleteUser);
+app.get('/users', user.findAll);
+app.get('/users/:id', user.findById);
+app.put('/users/:id', loginCheck, user.updateUser);
+app.delete('/users/:id', loginCheck, user.deleteUser);
 
 //Finally create server.
 http.createServer(app).listen(app.get('port'), function () {
